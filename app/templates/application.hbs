@@ -1,5 +1,9 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
 {{outlet}}
+
+{{log model.firstObject.title}}
+{{log model.firstObject.comments}}
+
+
+{{#each model.firstObject.comments as |comment|}}
+  <b>{{comment.text}}</b>
+{{/each}}
